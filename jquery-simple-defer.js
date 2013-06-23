@@ -10,12 +10,12 @@
 			return false;
 	    }
 	    
-	    if (typeof(options.execute) === 'function') {
+	    if (typeof(options.async) === 'function') {
 	        setTimeout(function() {
-	            if ($.isArray(options.execute_arguments)) {
-	                options.execute.apply(options.execute, options.execute_arguments);
+	            if ($.isArray(options.async_arguments)) {
+	                options.async.apply(options.async, options.async_arguments);
 	            } else {
-	                options.execute();
+	                options.async();
 	            }
 	        }, 0);
 	    }
