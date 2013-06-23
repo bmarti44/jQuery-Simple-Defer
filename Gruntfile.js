@@ -40,12 +40,17 @@ module.exports = function (grunt) {
 				src: 'jquery-simple-defer.js',
 				dest: 'jquery-simple-defer.min.js'
 			}
+		},
+		watch: {
+			files: ['jquery-simple-defer.js'],
+			tasks: ['jshint', 'min']
 		}
 	});
 
 	// Grunt tasks that this project depends on
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-yui-compressor');		// provides 'min' and 'cssmin' tasks
 	grunt.loadNpmTasks('grunt-contrib-jshint');		// used for checking code quality (similar to JSLint)
-
-	grunt.registerTask('default', ['jshint', 'min']);
+	
+	grunt.registerTask('default', ['jshint', 'min', 'watch']);
 };
