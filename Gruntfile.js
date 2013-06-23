@@ -42,8 +42,10 @@ module.exports = function (grunt) {
 			}
 		},
 		watch: {
-			files: ['jquery-simple-defer.js'],
-			tasks: ['jshint', 'min']
+			javascript: {
+				files: ['!components/**/*.js', '!node_modules/**/*.js', '**/*.js'],
+				tasks: ['jshint', 'min']
+			}
 		}
 	});
 
