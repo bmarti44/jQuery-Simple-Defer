@@ -14,12 +14,12 @@ Note: for more complicated use cases with deferred you'll probably want to use j
 Example
 -------
 
-$.defer({
-    'async': deferTest, /* the function to execute asynchronously */
-    'async_arguments': ['1', '2', '3'], /* the arguments to pass to the asynchronous function, formatted as an array */ 
-    'callback': deferComplete, /* the function you'd like to call after the asynchronous function completes */
-    'callback_arguments': ['1', '2', '3'] /* the arguments you'd like to pass to your callback */
-});
+		$.defer({
+		    'async': deferTest, /* the function to execute asynchronously */
+		    'async_arguments': ['1', '2', '3'], /* the arguments to pass to the asynchronous function, formatted as an array */ 
+		    'callback': deferComplete, /* the function you'd like to call after the asynchronous function completes */
+		    'callback_arguments': ['1', '2', '3'] /* the arguments you'd like to pass to your callback */
+		});
 
 http://jsfiddle.net/rCwen/4/
  
