@@ -6,24 +6,24 @@
 	
     $.defer = function( options ) {
 	    
-	    if (typeof(options) === 'undefined') {
+	    if ( typeof( options ) === 'undefined' ) {
 			return false;
 	    }
 	    
-	    if (typeof(options.async) === 'function') {
+	    if ( typeof( options.async ) === 'function' ) {
 	        setTimeout(function() {
-	            if ($.isArray(options.async_arguments)) {
-	                options.async.apply(options.async, options.async_arguments);
+	            if ( $.isArray( options.async_arguments ) ) {
+	                options.async.apply( options.async, options.async_arguments );
 	            } else {
 	                options.async();
 	            }
 	        }, 0);
 	    }
 	    
-	    if (typeof(options.callback) !== 'undefined') {
+	    if (typeof( options.callback ) !== 'undefined') {
 	        setTimeout(function() {
-	            if (typeof(options.callback_arguments) !== 'undefined') {
-	                options.callback.apply(options.callback, options.callback_arguments);
+	            if ( typeof( options.callback_arguments ) !== 'undefined' ) {
+	                options.callback.apply( options.callback, options.callback_arguments );
 	            } else {
 	                options.callback();
 	            }
