@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://localhost:35729/livereload.js"></script>
+		<script src="components/jquery/jquery.min.js"></script>
+		<script src="jquery-simple-defer.min.js"></script>
+		<script>
+			function deferComplete() {
+			    console.log('done');
+			    console.log(Array.prototype.slice.call(arguments));
+			}
+			
+			function deferTest() {
+			    console.log(Array.prototype.slice.call(arguments));
+			}
+			
+			    $.defer({
+			        'async': deferTest,
+			        'async_arguments': ['1', '2', '3'], 
+			        'callback': deferComplete,
+			        'callback_arguments': ['1', '2', '3']
+			    });
+			
+			console.log('not deferred');
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

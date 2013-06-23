@@ -44,7 +44,10 @@ module.exports = function (grunt) {
 		watch: {
 			javascript: {
 				files: ['!components/**/*.js', '!node_modules/**/*.js', '**/*.js'],
-				tasks: ['jshint', 'min']
+				tasks: ['jshint', 'min'],
+				options: {
+					livereload: true
+				}
 			}
 		}
 	});
